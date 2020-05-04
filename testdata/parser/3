@@ -1,0 +1,8 @@
+class Program {
+    void main() {
+        int a;
+        if (5==5){
+            int b = 0;
+        }
+    }
+}

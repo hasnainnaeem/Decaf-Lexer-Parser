@@ -1,0 +1,6 @@
+class Program {
+    void whatDa(int i, int j) {
+        int i;
+        int j = 2;
+    }
+}

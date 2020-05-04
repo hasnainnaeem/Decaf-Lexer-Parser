@@ -1,0 +1,4 @@
+class Program {
+    // here's a comment
+    int i, j, k = 0;
+}
