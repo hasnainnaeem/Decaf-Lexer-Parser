@@ -95,23 +95,23 @@ UNEQUALITY_OP       : '!=';
 
 ID                  : ALPHA ALPHA_NUM*; // for variable name
 
-ALPHA               : [a-zA-Z_];
+ALPHA      : [a-zA-Z_];
 
-CHAR_LITERAL        : APOSTROPHE ( . | '\t' | '\\' ) APOSTROPHE;
+CHAR_LITERAL        : APOSTROPHE ( '\\' [btnfr"'\\] | ~[\r\n\\"] ) APOSTROPHE;
 
 DECIMAL_LITERAL     : [0-9]+;
 
-DIGIT               : [0-9];
+DIGIT      : [0-9];
 
 HEX_LITERAL         : '0'[xX][0-9a-fA-F]+;
 
 BOOL_LITERAL        : TRUE | FALSE;
 
-STRING_LITERAL      : QUOTES .+? QUOTES ;
+STRING_LITERAL      : '"' ( '\\' [btnfr"'\\] | ~[\r\n\\"] )* '"';
 
 ALPHA_NUM           : ALPHA | DIGIT;
 
-HEX_DIGIT           : DIGIT | [a-fA-F];
+HEX_DIGIT  : '0'[xX]([0-9] | [a-fA-F]);
 
 LINE_COMMENT        : '//' .*? '\n' -> skip; // skip single line comments starting from // and ending with new line
 

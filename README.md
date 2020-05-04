@@ -1,5 +1,11 @@
 # Decaf
  
+## Important Notes
+- `DecafL.g4` defines the rules for Lexer only.
+- `Decaf.g4` defines the rules for Lexer and Parser.
+-  Using `Decaf.g4` may cause errors without any apparent reason. Which are not actually errors. 
+So, to test the lexer, use `DecafL.g4` file with Lexer rules only.
+
 ## Installation
 - Install ANTLR python library:
 `pip install antlr4-python3-runtime`
