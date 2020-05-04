@@ -1,5 +1,13 @@
 # Decaf
  
+## Installation
+- Install ANTLR python library:
+`pip install antlr4-python3-runtime`
+- Install Pycharm or VSCode plugins for ANTLR 4.
+
+Checkout this tutorial for ANTLR:
+[ANTLR Mega Tutorial](https://tomassetti.me/antlr-mega-tutorial/)
+
 ## Usage
 After updating Decaf.g4, compile the language:
 `java -Xmx500M -cp antlr-4.7.2-complete.jar org.antlr.v4.Tool -Dlanguage=Python3 Decaf.g4 -visitor`
